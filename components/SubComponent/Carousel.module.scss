@@ -1,0 +1,36 @@
+/* components/Carousel.module.scss */
+.carousel {
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    overflow-x: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.prevBtn,
+.nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prevBtn {
+    left: 0;
+}
+
+.nextBtn {
+    right: 0;
+}

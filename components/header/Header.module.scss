@@ -1,51 +1,137 @@
-.header{
-    display: flex;
-    justify-content: space-between;
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+}
+
+.header {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
     background-color: white;
-    padding: 10px 16px;
+    transition: all 0.3s ease;
 
-    .nav{
-        width: 100%;
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        width: 0;
         display: flex;
-        justify-content: center;
+        align-items: flex-start;
 
-        position: relative;
-        .nav__toggle{
-            position: absolute;
-            right: 0;
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+        .text{
+            margin-left: 5px;
+            text-transform: uppercase;
+            letter-spacing: 4.8px;
+        }
+    }
 
-            cursor: pointer;
-            .menu__open,
-            .menu__close{
-                height: 24px;
-                width: 24px;
-            }
-            .menu__close{
-                display: none;
-            }
+    .nav__toggle {
+        cursor: pointer;
+        display: none;
+
+        span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            background-color: #6A45FF;
+            transition: all 0.3s ease;
         }
-        .nav__checkbox{
-            display: none;
-            &:checked ~ .nav__list {
-                .nav__menu li{
-                    display: block;
-                }
-            }
-            &:checked ~ .nav__toggle .menu__close{
-                display: block;
-            }
-            &:checked ~ .nav__toggle .menu__open{
-                display: none;
-            }
+    }
+
+    .nav__checkbox {
+        display: none;
+
+        &:checked~.nav {
+            height: 200px;
         }
+
+        &:checked~.nav__toggle span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        &:checked~.nav__toggle span:nth-child(2) {
+            opacity: 0;
+        }
+
+        &:checked~.nav__toggle span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+    }
+
+    .nav {
+        width: 100%;
+        overflow: hidden;
+        height: 0;
+        transition: height 0.3s ease;
+        order: 3;
+
         .nav__menu{
+            margin-top: 10px;
+            width: 100%;
             li{
-                display: none;
+                padding: 16px 0;
+                color: #202124;
+                &:hover{
+                    background-color: #f5f5f5;
+                }
             }
         }
     }
-    ul{
-        display: flex;
+
+    @media screen and (max-width: 768px) {
+        .nav__toggle {
+            display: block;
+            order: 2;
+            margin-left: auto;
+        }
+
+        .nav__checkbox {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 769px) {
+
+        .nav__toggle {
+            display: none;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            order: 2;
+            height: auto;
+        }
+
+        .nav__menu {
+            display: flex;
+            justify-content: center;
+
+            li {
+                margin: 0 10px;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+                font-size: 16px;
+                font-weight: 600;
+                font-family: 'Noto Sans';
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
     }
 }

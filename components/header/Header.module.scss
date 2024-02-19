@@ -1,0 +1,51 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+    padding: 10px 16px;
+
+    .nav{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        position: relative;
+        .nav__toggle{
+            position: absolute;
+            right: 0;
+
+            cursor: pointer;
+            .menu__open,
+            .menu__close{
+                height: 24px;
+                width: 24px;
+            }
+            .menu__close{
+                display: none;
+            }
+        }
+        .nav__checkbox{
+            display: none;
+            &:checked ~ .nav__list {
+                .nav__menu li{
+                    display: block;
+                }
+            }
+            &:checked ~ .nav__toggle .menu__close{
+                display: block;
+            }
+            &:checked ~ .nav__toggle .menu__open{
+                display: none;
+            }
+        }
+        .nav__menu{
+            li{
+                display: none;
+            }
+        }
+    }
+    ul{
+        display: flex;
+    }
+}

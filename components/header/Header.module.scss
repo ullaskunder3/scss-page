@@ -9,7 +9,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px 16px;
     position: relative;
     background-color: rgba(255, 255, 255, 0.78);
     transition: all 0.3s ease;
@@ -81,7 +81,7 @@
         order: 3;
 
         .nav__menu{
-            margin-top: 10px;
+            // margin-top: 10px;
             width: 100%;
             li{
                 padding: 16px 0;

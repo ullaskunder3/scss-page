@@ -1,36 +1,37 @@
 .logoSection {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    display: flex;
-    justify-content: center;
-    gap: 120px;
-  
-    .square {
-      width: 100px;
-      height: 100px;
-      border-style: solid;
-      border-width: 50px;
-      border-color: #8BFF54 #E9FF60 #FF5252 #6587FF;
-  
-      animation: logoAnimation 5s infinite;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+
+  .square {
+    width: 100px;
+    height: 100px;
+    border-style: solid;
+    border-width: 50px;
+    border-color: #8BFF54 #E9FF60 #FF5252 #6587FF;
+
+    animation: logoAnimation 5s infinite;
+  }
+
+  @keyframes logoAnimation {
+    0% {
+      transform: rotate(0deg) scale(1);
     }
-  
-    @keyframes logoAnimation {
-      0% {
-        transform: rotate(0deg) scale(1);
-      }
-      50% {
-        transform: rotate(360deg) scale(1.5);
-      }
-      100% {
-        transform: rotate(0deg) scale(1);
-      }
+
+    50% {
+      transform: rotate(360deg) scale(1.5);
     }
-  
-    @media (max-width: 768px) {
-      padding-top: 80px;
-      padding-bottom: 80px;
-      gap: 64px;
+
+    100% {
+      transform: rotate(0deg) scale(1);
     }
   }
-  
+
+  @media (max-width: 768px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    gap: 64px;
+  }
+}

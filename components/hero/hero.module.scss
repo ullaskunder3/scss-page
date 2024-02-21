@@ -126,18 +126,21 @@
         padding-inline: 160px;
     }
 }
-.scrollIndicator{
+
+.scrollIndicator {
     position: relative;
     bottom: 0;
     height: 66px;
-    .text{
+
+    .text {
         font-family: 'Noto Sans';
         font-size: 16px;
         font-weight: 600;
         line-height: 160%;
         letter-spacing: 0.25em;
     }
-    .verticleLine{
+
+    .verticleLine {
         position: absolute;
         left: 50%;
         bottom: 0;

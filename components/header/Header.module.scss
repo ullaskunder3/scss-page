@@ -10,17 +10,19 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 16px;
+
     @media screen and (min-width: 769px) {
         padding: 14px 80px;
     }
+
     position: relative;
     background-color: rgba(255, 255, 255, 0.78);
     transition: all 0.3s ease;
 
     @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-          -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-      }
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
 
     .logo {
         font-size: 24px;
@@ -28,19 +30,22 @@
         width: 0;
         display: flex;
         align-items: normal;
-        
+
         svg {
             width: 40px;
             height: auto;
+
             @media (max-width: 768px) {
                 width: 29px;
             }
         }
-        .text{
+
+        .text {
             font-size: 32px;
             margin-left: 5px;
             text-transform: uppercase;
             letter-spacing: 4.8px;
+
             @media (max-width: 768px) {
                 font-size: 20px;
             }
@@ -89,16 +94,19 @@
         transition: height 0.3s ease;
         order: 3;
 
-        .nav__menu{
+        .nav__menu {
             width: 100%;
+
             @media (max-width: 768px) {
-                li{
+                li {
                     padding: 20px 0;
                 }
             }
-            li{
+
+            li {
                 color: #202124;
             }
+
             @media screen and (max-width: 1199px) {
                 gap: 40px;
             }

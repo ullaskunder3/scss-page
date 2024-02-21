@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+}
+
+.gradientOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0.75%, rgba(0, 0, 0, 0) 75%);
+}
+
+.mainTextWrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+
+    .main_subtitle {
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 160%;
+        letter-spacing: 0.3em;
+        vertical-align: top;
+
+        @media screen and (min-width: 769px) {
+            font-size: 32px;
+            background-color: #6A45FF;
+            margin: 0 -602rem;
+            border-left: 600rem solid #6A45FF;
+            border-right: 600rem solid #6A45FF;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 1199px) {
+            font-size: inherit;
+        }
+    }
+
+    .main_paragraph {
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 150%;
+        letter-spacing: 0.05em;
+        vertical-align: top;
+        text-wrap: balance;
+
+        @media screen and (min-width: 769px) {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 160%;
+            letter-spacing: 0.3em;
+            vertical-align: top;
+            white-space: normal;
+            padding-inline: 223px;
+        }
+
+        @media screen and (max-width: 1199px) {
+            padding-inline: 0px;
+        }
+
+    }
+}
+
+.logoGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+
+    .svg {
+        svg {
+            @media screen and (min-width: 769px) {
+                width: 145px;
+                height: 145px;
+            }
+        }
+    }
+
+    .title {
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 160%;
+        letter-spacing: 0.48em;
+        text-align: center;
+        text-transform: uppercase;
+
+        @media screen and (min-width: 769px) {
+            font-size: 78px;
+        }
+    }
+}
+
+.heroWrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    @media (max-width: 768px) {
+        height: 554px;
+    }
+
+}
+
+.heroContent {
+    position: absolute;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+    color: white;
+
+    @media screen and (min-width: 769px) {
+        gap: 64px;
+        padding-inline: 160px;
+    }
+}

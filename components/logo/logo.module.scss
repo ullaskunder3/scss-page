@@ -1,0 +1,21 @@
+.logoSection {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+
+    .square {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 50px;
+        border-color: #8BFF54 #E9FF60 #FF5252 #6587FF;
+    }
+
+    @media (max-width: 768px) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        gap: 64px;
+    }
+}

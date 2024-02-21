@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+}
+
+$desktop-width-rectange: 280px;
+$mobile-width-rectange: 40px;
+$desktop-bg-color-rectange: #6A45FF;
+$mobile-bg-color-rectange: rgba(106, 69, 255, 0.24);
+
+$desktop-max-width-wrapper: 440px;
+$mobile-max-width-wrapper: 375px;
+
+$desktop-cta-image-width: 750px;
+$mobile-cta-image-width: 311px;
+
+.ctaContainer {
+    background-color: #DCE1E6;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+
+    .ctaLayout {
+        display: flex;
+        justify-content: flex-start;
+        padding-block: 80px;
+
+        @media (min-width: 769px) {
+            justify-content: center;
+            padding: 80px 64px 80px 0px;
+            padding-block: 200px;
+            gap: 120px;
+        }
+
+        .header {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 160%;
+            letter-spacing: 0.3em;
+        }
+
+        .image {
+            overflow: hidden;
+            transition: width 0.3s ease;
+            position: relative;
+
+            img {
+                position: unset !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .image.desktop {
+                width: 0;
+            }
+
+            .image.mobile {
+                width: $mobile-cta-image-width;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .image.desktop {
+                width: $desktop-cta-image-width;
+            }
+
+            .image.mobile {
+                width: 0;
+            }
+        }
+
+        .textContainer {
+            display: flex;
+            flex-direction: column;
+            max-width: $desktop-max-width-wrapper;
+            justify-content: space-evenly;
+            gap: 32px;
+
+            @media (max-width: 768px) {
+                max-width: $mobile-max-width-wrapper;
+                height: 100%;
+                padding-right: 64px;
+            }
+
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 32px;
+
+                p {
+                    padding-left: 16px;
+
+                    @media (min-width: 769px) {
+                        padding: 0px;
+                    }
+                }
+            }
+
+            .ctaBtnWrapper {
+                display: flex;
+                align-items: center;
+
+                .btnText {
+                    padding-inline: 16px;
+
+                    @media (min-width: 769px) {
+                        padding: 0px;
+                    }
+                }
+            }
+        }
+
+        .para {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 0.05em;
+            text-align: justify;
+        }
+
+        .btnText {
+            p {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 160%;
+                letter-spacing: 0.3em;
+            }
+        }
+    }
+
+    .absoluteRectangel {
+        position: absolute;
+        background-color: rgba(106, 69, 255, 0.24);
+        top: 0;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -10;
+        width: $desktop-width-rectange;
+        background-color: $desktop-bg-color-rectange;
+        transition: width 0.3s ease, background-color 0.3s ease;
+
+
+        @media (max-width: 768px) {
+            width: $mobile-width-rectange;
+            background-color: $mobile-bg-color-rectange;
+        }
+    }
+}
+
+.subtitle {
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 160%;
+    letter-spacing: 0.3em;
+    padding-left: 16px;
+  
+    @media (min-width: 769px) {
+      padding: 0px;
+    }
+  
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background-color: #6A45FF;
+      left: 0%;
+      bottom: 0;
+    }
+  }

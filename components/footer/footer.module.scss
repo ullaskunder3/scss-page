@@ -1,0 +1,79 @@
+.footer {
+    color: white;
+    background-color: #5D6273;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    gap: 56px;
+    flex-direction: column;
+    padding: 80px 200px;
+
+    @media (max-width: 768px) {
+        gap: 40px;
+        padding-block: 64px;
+        padding-inline: 0px;
+    }
+
+
+    .pagelink {
+        display: flex;
+        justify-content: center;
+        gap: 96px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        span {
+            font-family: 'Noto Sans';
+            font-weight: 600;
+            line-height: 160%;
+            letter-spacing: 0.3em;
+        }
+    }
+
+    .socialLinks {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @media (max-width: 768px) {
+            gap: 16px;
+            padding-inline: 24px;
+        }
+
+        .verticalLine {
+            display: block;
+            height: 1px;
+            border: 0;
+            border-top: 2px solid #fff;
+        }
+
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+
+            @media (max-width: 768px) {
+                gap: 10px;
+                padding-inline: 24px;
+            }
+
+            span {
+                svg {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 150%;
+        letter-spacing: 0.05em;
+    }
+}

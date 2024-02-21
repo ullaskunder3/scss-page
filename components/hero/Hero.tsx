@@ -1,27 +1,24 @@
-import { laptopimage3 } from "@lib/assets";
-import Image from "next/image";
+"use client";
 import styles from "./hero.module.scss";
 
 import { Revalia } from "next/font/google";
+import { Carousel } from "@components/SubComponent/Carousel";
 const revalia = Revalia({
     weight: "400",
     style: "normal",
     subsets: ['latin'],
 })
+interface HeroProps {
+    images: string[];
+    autoplayCarol?: boolean;
+}
 
-export const Hero = () => {
+export const Hero:React.FC<HeroProps> = ({images, autoplayCarol=true}) => {
+    
     return (
         <div className={styles.heroWrapper}>
             <div className={styles.imageWrapper}>
-                <Image
-                    priority
-                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPkso6pBwACGgEie2Im0gAAAABJRU5ErkJggg=="
-                    src={laptopimage3}
-                    fill
-                    style={{ objectFit: "cover" }}
-                    alt="hero image"
-                />
-                <div className={styles.gradientOverlay}></div>
+                <Carousel images={images} autoPlay={autoplayCarol} />
             </div>
             <div className={styles.heroContent}>
                 <div className={styles.logoGroup}>
@@ -38,15 +35,11 @@ export const Hero = () => {
                         adipiscing elit, sed do eiusmod tempor
                         ut labore et dolore magna aliqua.</p>
                 </div>
-                <div style={{ position: "relative", bottom: "0", height: "66px" }}>
-                    <div style={{
-                        fontFamily: 'Noto Sans', fontSize: "16px", fontWeight: "600", lineHeight: "160%", letterSpacing: "0.25em"
-                    }}>
+                <div className={styles.scrollIndicator}>
+                    <div className={styles.text}>
                         scroll
                     </div>
-                    <div style={{
-                        position: "absolute", left: "50%", bottom: "0", borderLeft: "1px solid white", height: "30px"
-                    }}></div>
+                    <div className={styles.verticleLine}></div>
                 </div>
             </div>
         </div>

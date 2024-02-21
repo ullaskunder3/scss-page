@@ -1,36 +1,24 @@
-/* components/Carousel.module.scss */
-.carousel {
-    position: relative;
-}
-
-.slides {
-    display: flex;
-    overflow-x: hidden;
-}
-
-.slide {
-    display: none;
-}
-
-.active {
-    display: block;
-}
-
-.prevBtn,
-.nextBtn {
+.nextBtn, .prevBtn{
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
+    bottom: 50%;
+    z-index: 1000;
+    background-color: #6a45ff48;
     border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    z-index: 1;
-}
+    width: 50px;
+    height: 50px;
 
-.prevBtn {
-    left: 0;
+    svg{
+        width: 20%;
+    }
 }
-
-.nextBtn {
+.nextBtn{
     right: 0;
+}
+.prevBtn{
+    left: 0;
 }

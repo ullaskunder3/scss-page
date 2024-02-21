@@ -5,6 +5,8 @@ import { MainSection } from "@components/main/Main";
 import { CallToActionSection } from "@components/cta/CallToActionSection";
 import { LogoSection } from "@components/logo/LogoSection";
 import { Footer } from "@components/footer/Footer";
+import { laptopimage1, laptopimage2, laptopimage3 } from "@lib/assets";
+const images = [laptopimage1, laptopimage2, laptopimage3].map(image => image.src);
 
 export default function Home() {
 
@@ -13,7 +15,7 @@ export default function Home() {
       <div className={styles.stickyheader}>
         <Header />
       </div>
-      <Hero />
+      <Hero images={images} autoplayCarol={true} />
       <MainSection />
       <CallToActionSection />
       <LogoSection />

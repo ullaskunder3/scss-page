@@ -126,3 +126,22 @@
         padding-inline: 160px;
     }
 }
+.scrollIndicator{
+    position: relative;
+    bottom: 0;
+    height: 66px;
+    .text{
+        font-family: 'Noto Sans';
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 160%;
+        letter-spacing: 0.25em;
+    }
+    .verticleLine{
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        border-left: 1px solid white;
+        height: 30px;
+    }
+}
